@@ -1,4 +1,4 @@
-terraform {
+ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -27,7 +27,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "gitopsterrastate"
+    bucket = "vprofile-actions1239"
     key    = "terraform.tfstate"
     region = "us-east-2"
   }
