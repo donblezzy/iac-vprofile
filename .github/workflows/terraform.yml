@@ -78,6 +78,4 @@ jobs:
 
       - name: Install ingress controller
         if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
-        run: |
-          kubectl delete namespace ingress-nginx --ignore-not-found
-          kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/aws/deploy.yaml
+        run: kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/aws/deploy.yaml
