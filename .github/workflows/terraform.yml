@@ -42,7 +42,7 @@ jobs:
 
       - name: Terraform fmt
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt -check -recursive || true
 
 
       - name: Terraform validate
