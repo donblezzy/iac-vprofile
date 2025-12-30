@@ -13,12 +13,6 @@ on:
     paths:
       - terraform/**  # Name of the terraform folder
 
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_REGION: us-east-2
-  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
-  EKS_CLUSTER: vprofile-eks
 
 jobs:
   terraform:
