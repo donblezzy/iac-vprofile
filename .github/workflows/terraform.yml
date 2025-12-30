@@ -34,6 +34,9 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
+      
+      - name: Verify AWS identity
+        run: aws sts get-caller-identity
           
 
       - name: Terraform Init
