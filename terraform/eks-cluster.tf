@@ -32,21 +32,4 @@ module "eks" {
       desired_size = 1
     }
   }
-
-  # Grant access to IAM users/roles
-  access_entries = {
-    ops_user = {
-      kubernetes_groups = []
-      principal_arn     = "arn:aws:iam::503876630944:user/ops"
-      
-      policy_associations = {
-        admin = {
-          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-          access_scope = {
-            type = "cluster"
-          }
-        }
-      }
-    }
-  }
 }
